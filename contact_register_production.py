@@ -15,8 +15,8 @@ class RegisterTestCase(unittest.TestCase):
         chrome_options = Options()
         chrome_options.add_argument("--headless")
         self.driver = webdriver.Chrome(chrome_options=chrome_options)
-        self.driver.get('https://gmod-stage.nal.usda.gov/register/project-dataset/account')
-        print('Test:https://gmod-stage.nal.usda.gov/register/project-dataset/account')
+        self.driver.get('https://i5k.nal.usda.gov/register/project-dataset/account')
+        print('Test:https://i5k.nal.usda.gov/register/project-dataset/account')
 
     #namespace must be test....
     def test_register(self):
@@ -70,8 +70,8 @@ class ContactTestCase(unittest.TestCase):
         chrome_options = Options()
         chrome_options.add_argument("--headless")
         self.driver = webdriver.Chrome(chrome_options=chrome_options)
-        self.driver.get('https://gmod-stage.nal.usda.gov/contact')
-        print('Test:https://gmod-stage.nal.usda.gov/contact')
+        self.driver.get('https://i5k.nal.usda.gov/contact')
+        print('Test:https://i5k.nal.usda.gov/contact')
 
     #namespace must be test....
     def test_contact(self):
