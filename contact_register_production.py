@@ -22,7 +22,7 @@ class RegisterTestCase(unittest.TestCase):
     def test_register(self):
         driver=self.driver
         name_element = driver.find_element_by_xpath("//*[@id='edit-name']")
-        name_element.send_keys("Test_Robot_production")
+        name_element.send_keys("Test_Robot_production_register")
         print ('name_done')
 
         mail_element = driver.find_element_by_xpath("//*[@id='edit-email']")
@@ -30,11 +30,11 @@ class RegisterTestCase(unittest.TestCase):
         print ('email_done')
 
         subject_element = driver.find_element_by_xpath("//*[@id='edit-affiliation']")
-        subject_element.send_keys("Test_Robot_production")
+        subject_element.send_keys("Test_Robot_production_register")
         print ('Affiliation_done')
 
         message_element = driver.find_element_by_xpath("//*[@id='edit-content']")
-        message_element.send_keys("Automated_Testing_for_production")
+        message_element.send_keys("Automated_Testing_for_production_register")
         print ('Contact_done')
 
         #Math question
@@ -77,7 +77,7 @@ class ContactTestCase(unittest.TestCase):
     def test_contact(self):
         driver=self.driver
         name_element = driver.find_element_by_xpath("//*[@id='edit-name']")
-        name_element.send_keys("Test_Robot_production")
+        name_element.send_keys("Test_Robot_production_contact")
         print ('name_done')
 
         mail_element = driver.find_element_by_xpath("//*[@id='edit-mail']")
@@ -85,11 +85,11 @@ class ContactTestCase(unittest.TestCase):
         print ('email_done')
 
         subject_element = driver.find_element_by_xpath("//*[@id='edit-subject']")
-        subject_element.send_keys("Test_Robot_production")
+        subject_element.send_keys("Test_Robot_production_contact")
         print ('Subject_done')
 
         message_element = driver.find_element_by_xpath("//*[@id='edit-message']")
-        message_element.send_keys("Automated_Testing_for_production")
+        message_element.send_keys("Automated_Testing_for_production_contact")
         print ('Message_done')
 
         #Math question
