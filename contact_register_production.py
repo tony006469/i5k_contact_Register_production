@@ -21,7 +21,7 @@ class RegisterTestCase(unittest.TestCase):
     #namespace must be test....
     def test_register(self):
         driver=self.driver
-        name_element = driver.find_element_by_name("name")
+        name_element = driver.find_element_by_xpath("//*[@id='edit-name']")
         name_element.send_keys("Test_Robot")
         print ('name_done')
 
@@ -29,11 +29,11 @@ class RegisterTestCase(unittest.TestCase):
         mail_element.send_keys("monica.poelchau@ars.usda.gov")
         print ('email_done')
 
-        subject_element = driver.find_element_by_name("affiliation")
+        subject_element = driver.find_element_by_xpath("//*[@id='edit-affiliation']")
         subject_element.send_keys("Test_Robot")
         print ('Affiliation_done')
 
-        message_element = driver.find_element_by_name("content")
+        message_element = driver.find_element_by_xpath("//*[@id='edit-content']")
         message_element.send_keys("Automated Testing")
         print ('Contact_done')
 
@@ -54,12 +54,12 @@ class RegisterTestCase(unittest.TestCase):
         print ('Math_done')
         
         #click button
-        submit_button = driver.find_element_by_xpath("//*[@id='edit-submit']")
-        submit_button.click()
+        #submit_button = driver.find_element_by_xpath("//*[@id='edit-submit']")
+        #submit_button.click()
 
         #Get error message
-        success_message=driver.find_element_by_xpath("/html/body/div[2]/div/div/div[1]").text
-        print (success_message.encode('utf-8'))
+        #success_message=driver.find_element_by_xpath("/html/body/div[2]/div/div/div[1]").text
+        #print (success_message.encode('utf-8'))
 
     def tearDown(self):
         self.driver.quit()
@@ -76,7 +76,7 @@ class ContactTestCase(unittest.TestCase):
     #namespace must be test....
     def test_contact(self):
         driver=self.driver
-        name_element = driver.find_element_by_name("name")
+        name_element = driver.find_element_by_xpath("//*[@id='edit-name']")
         name_element.send_keys("Test_Robot")
         print ('name_done')
 
@@ -103,19 +103,18 @@ class ContactTestCase(unittest.TestCase):
                 number.append(n)
 
         answer=int(number[0])+int(number[1])
-
-        answer_field = driver.find_element_by_name("captcha_response")
+        answer_field = driver.find_element_by_xpath("//*[@id='edit-captcha-response']")
         answer_field.send_keys(answer)
         print (answer)
         print ('Math_done')
 
         #click button
-        submit_button = driver.find_element_by_xpath("//*[@id='edit-submit']")
-        submit_button.click()
+        #submit_button = driver.find_element_by_xpath("//*[@id='edit-submit']")
+        #submit_button.click()
         
         #success message i5k:contact:"/html/body/div[2]/div/section/div[2]"
-        success_message=driver.find_element_by_xpath("/html/body/div[2]/div/section/div[3]").text
-        print (success_message.encode('utf-8'))
+        #success_message=driver.find_element_by_xpath("/html/body/div[2]/div/section/div[2]").text
+        #print (success_message.encode('utf-8'))
 
     def tearDown(self):
         self.driver.quit()
